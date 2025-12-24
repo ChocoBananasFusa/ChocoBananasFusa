@@ -1,220 +1,235 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choco Bananas Fusa</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Choco Bananas Fusa</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<!-- FUENTE LLAMATIVA Y DECENTE -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Pacifico&display=swap" rel="stylesheet">
 
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #fff9e6;
-            color: #000;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        header {
-            background: linear-gradient(135deg, #ffd500, #ff9800);
-            text-align: center;
-            padding: 50px 20px;
-        }
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff9e6;
+    color: #000;
+}
 
-        header h1 {
-            font-size: 3rem;
-            margin: 0;
-        }
+/* ===== HEADER DISEÑADO ===== */
+header {
+    background:
+        linear-gradient(rgba(255,213,0,0.95), rgba(255,213,0,0.95)),
+        url("bananos-blancos.png");
+    background-repeat: repeat;
+    background-size: 140px;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+}
 
-        header p {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-top: 10px;
-        }
+/* TEXTO MARCA */
+header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3.8rem;
+    margin: 0;
+    color: #000;
+    text-shadow: 3px 3px 0 #fff;
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            background-color: #000;
-            color: #ffd500;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+/* SUBTÍTULO */
+header p {
+    margin-top: 18px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    background: rgba(255,255,255,0.85);
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 30px;
+}
 
-        .btn:hover {
-            background-color: #5d3a1a;
-        }
+/* BOTÓN */
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 35px;
+    background-color: #000;
+    color: #ffd500;
+    text-decoration: none;
+    border-radius: 35px;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-        section {
-            padding: 40px 20px;
-            max-width: 1100px;
-            margin: auto;
-        }
+.btn:hover {
+    background-color: #5d3a1a;
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-        }
+/* ===== CONTENIDO ===== */
+section {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
 
-        .card {
-            background-color: #fff;
-            border-radius: 20px;
-            padding: 25px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            border-top: 8px solid #ff9800;
-        }
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
 
-        .card h2 {
-            color: #ff9800;
-            margin-bottom: 15px;
-        }
+.card {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-top: 8px solid #ff9800;
+}
 
-        .precio {
-            font-size: 2.5rem;
-            background-color: #ffd500;
-            padding: 15px;
-            border-radius: 15px;
-            text-align: center;
-            font-weight: bold;
-        }
+.card h2 {
+    color: #ff9800;
+    margin-bottom: 15px;
+}
 
-        .promo {
-            background-color: #000;
-            color: #ffd500;
-            border-radius: 20px;
-            padding: 30px;
-            text-align: center;
-            margin-top: 40px;
-        }
+.precio {
+    font-size: 2.5rem;
+    background-color: #ffd500;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+}
 
-        .promo h2 {
-            margin-bottom: 10px;
-        }
+.promo {
+    background-color: #000;
+    color: #ffd500;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    margin-top: 40px;
+}
 
-        .contacto {
-            background-color: #5d3a1a;
-            color: #fff;
-            border-radius: 20px;
-            padding: 30px;
-            margin-top: 40px;
-        }
+.contacto {
+    background-color: #5d3a1a;
+    color: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 40px;
+}
 
-        .contacto h2 {
-            color: #ffd500;
-            margin-bottom: 20px;
-        }
+.contacto h2 {
+    color: #ffd500;
+    margin-bottom: 20px;
+}
 
-        .contacto a {
-            color: #ffd500;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.contacto a {
+    color: #ffd500;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        .redes span {
-            display: block;
-            margin-top: 8px;
-            font-weight: bold;
-            color: #ffd500;
-        }
+.redes span {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #ffd500;
+}
 
-        footer {
-            background-color: #000;
-            color: #fff;
-            text-align: center;
-            padding: 15px;
-            font-size: 0.9rem;
-            margin-top: 40px;
-        }
+/* ===== FOOTER ===== */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2.3rem;
-            }
-        }
-    </style>
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.6rem;
+    }
+
+    header p {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        width: 90%;
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <header>
-        <h1>🍌 Choco Bananas Fusa 🍫</h1>
-        <p>El mejor sabor en bananos cubiertos de chocolate</p>
+<header>
+    <h1>Choco Bananas Fusa</h1>
+    <p>El mejor sabor en bananos cubiertos de chocolate 🍌🍫</p>
+
+    <a class="btn" href="https://wa.me/573142203201" target="_blank">
+        📲 Pide por WhatsApp
+    </a>
+</header>
+
+<section>
+    <div class="cards">
+        <div class="card">
+            <h2>🍫 Nuestro Producto</h2>
+            <p>
+                En <strong>Choco Bananas Fusa</strong> preparamos bananos cubiertos de chocolate
+                con ingredientes de alta calidad, perfectos para compartir o regalar.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>💰 Precio</h2>
+            <div class="precio">$10.000 COP</div>
+            <p style="text-align:center; margin-top:10px;">Precio por unidad</p>
+        </div>
+
+        <div class="card">
+            <h2>🚚 Domicilio</h2>
+            <p>
+                Realizamos domicilios en Fusagasugá.
+                Escríbenos y recibe tu pedido rápido y fácil.
+            </p>
+        </div>
+    </div>
+
+    <div class="promo">
+        <h2>🎉 PROMOCIÓN 🎉</h2>
+        <p>Domicilio GRATIS por tiempo limitado</p>
+    </div>
+
+    <div class="contacto">
+        <h2>📞 Contáctanos</h2>
+
+        <p>
+            📱 <a href="https://wa.me/573142203201" target="_blank">314 220 3201 – Johan Arango</a><br>
+            📱 <a href="https://wa.me/573108790730" target="_blank">310 879 0730 – Dilan Torres</a>
+        </p>
+
+        <div class="redes" style="margin-top:20px;">
+            <p><strong>📲 Redes Sociales:</strong></p>
+            <span>🔴 TikTok: @ChocoBananasFusa</span>
+            <span>🔴 Instagram: @ChocoBananasFusa</span>
+        </div>
 
         <a class="btn" href="https://wa.me/573142203201" target="_blank">
-            📲 Pide por WhatsApp
+            🍌 Ordena Ahora
         </a>
-    </header>
+    </div>
+</section>
 
-    <section>
-        <div class="cards">
-            <div class="card">
-                <h2>🍫 Nuestro Producto</h2>
-                <p>
-                    En <strong>Choco Bananas Fusa</strong> preparamos deliciosos bananos cubiertos de chocolate,
-                    hechos con ingredientes de alta calidad, perfectos para compartir,
-                    regalar o darte un gusto único.
-                </p>
-            </div>
-
-            <div class="card">
-                <h2>💰 Precio</h2>
-                <div class="precio">$10.000 COP</div>
-                <p style="text-align:center; margin-top:10px;">
-                    Precio por unidad
-                </p>
-            </div>
-
-            <div class="card">
-                <h2>🚚 Domicilio</h2>
-                <p>
-                    Realizamos domicilios rápidos en Fusagasugá.
-                    Escríbenos y recibe tu pedido sin complicaciones.
-                </p>
-            </div>
-        </div>
-
-        <div class="promo">
-            <h2>🎉 PROMOCIÓN DE DICIEMBRE 🎉</h2>
-            <p>
-                🎁 <strong>Domicilio TOTALMENTE GRATIS</strong><br>
-                Solo por el mes de diciembre
-            </p>
-        </div>
-
-        <div class="contacto">
-            <h2>📞 Contáctanos</h2>
-
-            <p>📱 <strong>WhatsApp:</strong></p>
-            <p>
-                <a href="https://wa.me/573142203201" target="_blank">314 220 3201 – Johan Arango</a><br>
-                <a href="https://wa.me/573108790730" target="_blank">310 879 0730 – Dilan Torres</a>
-            </p>
-
-            <p style="margin-top:15px;">
-                📧 <strong>Correo:</strong><br>
-                chocobananasfusa@gmail.com
-            </p>
-
-            <div class="redes" style="margin-top:20px;">
-                <p><strong>📲 Redes Sociales:</strong></p>
-                <span>🔴 TikTok: @ChocoBananasFusa</span>
-                <span>🔴 Instagram: @ChocoBananasFusa</span>
-            </div>
-
-            <a class="btn" href="https://wa.me/573142203201" target="_blank">
-                🍌 Ordena Ahora
-            </a>
-        </div>
-    </section>
-
-    <footer>
-        © 2025 Choco Bananas Fusa | Hecho con ❤️ y mucho chocolate 🍫
-    </footer>
+<footer>
+    © 2025 Choco Bananas Fusa | Hecho con ❤️ y chocolate 🍫
+</footer>
 
 </body>
 </html>
